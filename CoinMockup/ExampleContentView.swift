@@ -14,6 +14,7 @@ struct ExampleContentView: View {
             ScrollView {
                 VStack {
                     bannerView(banner: banner)
+//                    aaView(banner: banner)
                     Text("Hello world")
                     LazyVStack {
                         ForEach(dummy, id: \.id) { item in
@@ -47,6 +48,22 @@ struct ExampleContentView: View {
         }
         .padding()
     }
+    
+//    func aaView(banner: Banner) -> some View {
+//        RoundedRectangle(cornerRadius: 20)
+//            .fill(.green)
+//            .frame(height: 200)
+//            .overlay {
+//                VStack(alignment: .leading) {
+//                    Spacer()
+//                    Text("나의 소비내역")
+//                    Text(banner.totalFormat)
+//                }
+//                .background(.red)
+//                .frame(maxWidth: .infinity, alignment: .leading)
+//                .padding()
+//            }
+//    }
     
     func listView(data: Money) -> some View {
         HStack {
