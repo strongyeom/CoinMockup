@@ -9,15 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     
-    // ObservedObject : 부모뷰 ( 상위 뷰 ) 에 있는 데이터가 변경되었을때 랜더링 -> 하위뷰가 ObservedObject일 경우 하위 뷰도 싹다 랜더링 됨
+    // ObservedObject : 부모뷰 ( 상위 뷰 ) 에 있는 데이터가 변경되었을때 랜더링 -> 하위뷰가 ObservedObject일 경우 하위 뷰도 싹다 랜더링 됨 -> 랜더링 되는 시점에 인스턴스 새롭게 생성 
     
-    // ⭐️ StateObject : 상위뷰가 랜더링 되더라도 데이터가 유지 됨
+   
    @ObservedObject var viewModel = ContentViewModel()
+    
+    @State private var count: Int = 0
    
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack {
+                    Text("테스트 : \(count)")
+                    NavigationLink("베너 테스트", value: count)
                     ScrollView(.horizontal) {
                         LazyHStack {
                             ForEach(0..<4) { item in
@@ -49,6 +53,10 @@ struct ContentView: View {
             // 당겨서 새로고침 iOS 15.0+
             .refreshable {
                 viewModel.fetchBanner()
+                count = Int.random(in: 20...50)
+            }
+            .navigationDestination(for: Int.self) { _ in
+                BannerTestView(testNumber: $count)
             }
         }
         

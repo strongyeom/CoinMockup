@@ -23,7 +23,7 @@ class ListViewModel : ObservableObject {
             
             do {
                 let decodedData = try JSONDecoder().decode([Market].self, from: data)
-              //  print(decodedData)
+                print(decodedData)
                 DispatchQueue.main.async {
                     self.market = decodedData
                 }
