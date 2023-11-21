@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var banner: String = "23,322,222,123 원"
-    @State private var money: [Money] = []
+    @State private var money: [Market] = []
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -48,11 +48,13 @@ struct ContentView: View {
             // 당겨서 새로고침 iOS 15.0+
             .refreshable {
                 banner = "\(Int.random(in: 50000...10000000).formatted())원"
-                money = dummy.shuffled()
             }
             // 빌드 되자마자 보여짐 == viewWillAppear와 동일
             .onAppear {
-                money = dummy.shuffled()
+                // 화면이 뜰때마다 호출이 됨... 시점 고민해보기
+                UpbitAPI.fetchAllMarket { market in
+                   money = market
+                }
             }
         }
         
@@ -99,14 +101,14 @@ struct ContentView: View {
 //        return result
 //    }
     
-    func listView(data: Money) -> some View {
+    func listView(data: Market) -> some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading) {
-                Text(data.product)
-                Text(data.category.rawValue)
+                Text(data.koreanName)
+                Text(data.englishName)
             }
             Spacer()
-            Text(data.amountFormat)
+            Text(data.market)
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 10)
