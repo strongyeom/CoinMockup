@@ -69,7 +69,7 @@ struct ExampleContentView: View {
         HStack {
             VStack(alignment: .leading) {
                 Text(data.product)
-                Text(data.amountFormat)
+                Text(data.category.rawValue)
             }
             Spacer()
             Text("\(data.amount)원")
