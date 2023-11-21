@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		264412662B0C4A16003BA01A /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264412652B0C4A16003BA01A /* OverlayView.swift */; };
 		26F03BC02B0B007000BC5E68 /* CoinMockupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F03BBF2B0B007000BC5E68 /* CoinMockupApp.swift */; };
 		26F03BC22B0B007000BC5E68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F03BC12B0B007000BC5E68 /* ContentView.swift */; };
 		26F03BC42B0B007300BC5E68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26F03BC32B0B007300BC5E68 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		264412652B0C4A16003BA01A /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		26F03BBC2B0B007000BC5E68 /* CoinMockup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinMockup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26F03BBF2B0B007000BC5E68 /* CoinMockupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMockupApp.swift; sourceTree = "<group>"; };
 		26F03BC12B0B007000BC5E68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				26F03BC12B0B007000BC5E68 /* ContentView.swift */,
 				26F03BD22B0BA1BA00BC5E68 /* ExampleContentView.swift */,
 				26F03BD52B0BAA8F00BC5E68 /* Banner.swift */,
+				264412652B0C4A16003BA01A /* OverlayView.swift */,
 				26F03BD42B0BAA8F00BC5E68 /* Money.swift */,
 				26F03BC32B0B007300BC5E68 /* Assets.xcassets */,
 				26F03BC52B0B007300BC5E68 /* Preview Content */,
@@ -149,6 +152,7 @@
 				26F03BC22B0B007000BC5E68 /* ContentView.swift in Sources */,
 				26F03BC02B0B007000BC5E68 /* CoinMockupApp.swift in Sources */,
 				26F03BD72B0BAA8F00BC5E68 /* Banner.swift in Sources */,
+				264412662B0C4A16003BA01A /* OverlayView.swift in Sources */,
 				26F03BD62B0BAA8F00BC5E68 /* Money.swift in Sources */,
 				26F03BD32B0BA1BA00BC5E68 /* ExampleContentView.swift in Sources */,
 			);

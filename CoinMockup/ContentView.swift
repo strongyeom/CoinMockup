@@ -62,15 +62,26 @@ struct ContentView: View {
    
     func bannerView() -> some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 20)
+            Rectangle()
                 .fill(.gray)
+                .overlay(content: {
+                    Circle()
+                        .fill(.yellow.opacity(0.4))
+                        .offset(x: -100, y: -20)
+                        .scaleEffect(1.3, anchor: .topLeading)
+                        
+                })
+                .clipShape(RoundedRectangle(cornerRadius: 20))
                 .frame(height: 200)
             // 애니메이션 적용 레이블과 ZStack 따로
             VStack(alignment: .leading) {
                 Spacer()
                 Text("나의 소비내역")
+                    .font(.title3)
                 Text(banner)
             }
+            .font(.title)
+            .foregroundColor(.white)
             
             // 17.0 +
 //            .visualEffect { content, geometryProxy in
@@ -91,8 +102,8 @@ struct ContentView: View {
     func listView(data: Money) -> some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading) {
-                Text("비트코인 \(data.product)")
-                Text("Bitcoin \(data.category.rawValue)")
+                Text(data.product)
+                Text(data.category.rawValue)
             }
             Spacer()
             Text(data.amountFormat)
