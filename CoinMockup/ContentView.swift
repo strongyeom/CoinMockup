@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var banner: String = "23,322,222,123 원"
-    @State private var money: [Market] = []
+    
+   @ObservedObject var viewModel = ContentViewModel()
+   
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -37,7 +38,7 @@ struct ContentView: View {
 
                     Text("Hello, world!")
                     LazyVStack {
-                        ForEach(money, id: \.id) { data in
+                        ForEach(viewModel.money, id: \.id) { data in
                             listView(data: data)
                         }
                     }
@@ -47,14 +48,15 @@ struct ContentView: View {
             .navigationTitle("My Wallet")
             // 당겨서 새로고침 iOS 15.0+
             .refreshable {
-                banner = "\(Int.random(in: 50000...10000000).formatted())원"
+                viewModel.banner = "\(Int.random(in: 50000...10000000).formatted())원"
             }
             // 빌드 되자마자 보여짐 == viewWillAppear와 동일
             .onAppear {
                 // 화면이 뜰때마다 호출이 됨... 시점 고민해보기
-                UpbitAPI.fetchAllMarket { market in
-                   money = market
-                }
+//                UpbitAPI.fetchAllMarket { market in
+//                    viewModel.money = market
+//                }
+                viewModel.fetchAllMarket()
             }
         }
         
@@ -80,7 +82,7 @@ struct ContentView: View {
                 Spacer()
                 Text("나의 소비내역")
                     .font(.title3)
-                Text(banner)
+                Text(viewModel.banner)
             }
             .font(.title)
             .foregroundColor(.white)
