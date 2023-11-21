@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ListView: View {
     
-    @ObservedObject var viewModel = ListViewModel()
+    // StateObject : 데이터가 바뀌면 랜더링 되지만 상위뷰가 랜더링 되었을때 하위뷰에 StateObject로 되어있다면 데이터가 유지된다.
+    @StateObject var viewModel = ListViewModel()
     
     var body: some View {
         ScrollView {

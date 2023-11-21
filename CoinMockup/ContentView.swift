@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     
+    // ObservedObject : 부모뷰 ( 상위 뷰 ) 에 있는 데이터가 변경되었을때 랜더링 -> 하위뷰가 ObservedObject일 경우 하위 뷰도 싹다 랜더링 됨
+    
+    // ⭐️ StateObject : 상위뷰가 랜더링 되더라도 데이터가 유지 됨
    @ObservedObject var viewModel = ContentViewModel()
    
     var body: some View {
