@@ -10,6 +10,8 @@
 		264412662B0C4A16003BA01A /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264412652B0C4A16003BA01A /* OverlayView.swift */; };
 		264412682B0C4E75003BA01A /* UpbitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264412672B0C4E75003BA01A /* UpbitAPI.swift */; };
 		2644126B2B0C595E003BA01A /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2644126A2B0C595E003BA01A /* ContentViewModel.swift */; };
+		2644126E2B0C733F003BA01A /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2644126D2B0C733F003BA01A /* ListView.swift */; };
+		264412702B0C7369003BA01A /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2644126F2B0C7369003BA01A /* ListViewModel.swift */; };
 		26F03BC02B0B007000BC5E68 /* CoinMockupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F03BBF2B0B007000BC5E68 /* CoinMockupApp.swift */; };
 		26F03BC22B0B007000BC5E68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F03BC12B0B007000BC5E68 /* ContentView.swift */; };
 		26F03BC42B0B007300BC5E68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26F03BC32B0B007300BC5E68 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 		264412652B0C4A16003BA01A /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		264412672B0C4E75003BA01A /* UpbitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpbitAPI.swift; sourceTree = "<group>"; };
 		2644126A2B0C595E003BA01A /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		2644126D2B0C733F003BA01A /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		2644126F2B0C7369003BA01A /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		26F03BBC2B0B007000BC5E68 /* CoinMockup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinMockup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26F03BBF2B0B007000BC5E68 /* CoinMockupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMockupApp.swift; sourceTree = "<group>"; };
 		26F03BC12B0B007000BC5E68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +56,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		2644126C2B0C7332003BA01A /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				26F03BD22B0BA1BA00BC5E68 /* ExampleContentView.swift */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
 		26F03BB32B0B006F00BC5E68 = {
 			isa = PBXGroup;
 			children = (
@@ -74,8 +86,10 @@
 				26F03BBF2B0B007000BC5E68 /* CoinMockupApp.swift */,
 				26F03BC12B0B007000BC5E68 /* ContentView.swift */,
 				2644126A2B0C595E003BA01A /* ContentViewModel.swift */,
+				2644126D2B0C733F003BA01A /* ListView.swift */,
+				2644126F2B0C7369003BA01A /* ListViewModel.swift */,
 				264412692B0C4E78003BA01A /* Network */,
-				26F03BD22B0BA1BA00BC5E68 /* ExampleContentView.swift */,
+				2644126C2B0C7332003BA01A /* Example */,
 				26F03BD52B0BAA8F00BC5E68 /* Banner.swift */,
 				264412652B0C4A16003BA01A /* OverlayView.swift */,
 				26F03BD42B0BAA8F00BC5E68 /* Money.swift */,
@@ -163,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				264412702B0C7369003BA01A /* ListViewModel.swift in Sources */,
 				2644126B2B0C595E003BA01A /* ContentViewModel.swift in Sources */,
 				26F03BC22B0B007000BC5E68 /* ContentView.swift in Sources */,
 				26F03BC02B0B007000BC5E68 /* CoinMockupApp.swift in Sources */,
@@ -171,6 +186,7 @@
 				26F03BD62B0BAA8F00BC5E68 /* Money.swift in Sources */,
 				264412682B0C4E75003BA01A /* UpbitAPI.swift in Sources */,
 				26F03BD32B0BA1BA00BC5E68 /* ExampleContentView.swift in Sources */,
+				2644126E2B0C733F003BA01A /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

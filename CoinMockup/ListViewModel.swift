@@ -1,5 +1,5 @@
 //
-//  ContentViewModel.swift
+//  ListViewModel.swift
 //  CoinMockup
 //
 //  Created by 염성필 on 2023/11/21.
@@ -7,16 +7,10 @@
 
 import Foundation
 
-class ContentViewModel : ObservableObject {
+class ListViewModel : ObservableObject {
     
-    // 데이터가 바뀔때마다 View를 업데이트 함 ( 랜더링 ) 
-    @Published var banner: Banner = Banner()
-    @Published var money: [Market] = []
+    @Published var market: [Market] = []
     
-    func fetchBanner() {
-        banner = Banner()
-    }
-
     func fetchAllMarket() {
         let url = URL(string: "https://api.upbit.com/v1/market/all")!
         
@@ -31,7 +25,7 @@ class ContentViewModel : ObservableObject {
                 let decodedData = try JSONDecoder().decode([Market].self, from: data)
               //  print(decodedData)
                 DispatchQueue.main.async {
-                    self.money = decodedData
+                    self.market = decodedData
                 }
             } catch {
                 print(error.localizedDescription)

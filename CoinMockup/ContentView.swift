@@ -19,6 +19,9 @@ struct ContentView: View {
                         LazyHStack {
                             ForEach(0..<4) { item in
                                 bannerView()
+                                    .onTapGesture {
+                                        viewModel.fetchBanner()
+                                    }
                                     .frame(width: UIScreen.main.bounds.width)
                                 // 화면에 꽉 채우기
 //                                    .containerRelativeFrame(.horizontal) 17.0+
@@ -35,28 +38,14 @@ struct ContentView: View {
                         // 17.0 + <- 양옆의 이미지가 살짝 보이게 하는 방법
                         // safeAreaPadding([.horizontal], 40)
                     }
-
-                    Text("Hello, world!")
-                    LazyVStack {
-                        ForEach(viewModel.money, id: \.id) { data in
-                            listView(data: data)
-                        }
-                    }
+                    ListView()
                 }
             }
             .scrollIndicators(.hidden)
             .navigationTitle("My Wallet")
             // 당겨서 새로고침 iOS 15.0+
             .refreshable {
-                viewModel.banner = "\(Int.random(in: 50000...10000000).formatted())원"
-            }
-            // 빌드 되자마자 보여짐 == viewWillAppear와 동일
-            .onAppear {
-                // 화면이 뜰때마다 호출이 됨... 시점 고민해보기
-//                UpbitAPI.fetchAllMarket { market in
-//                    viewModel.money = market
-//                }
-                viewModel.fetchAllMarket()
+                viewModel.fetchBanner()
             }
         }
         
@@ -67,7 +56,7 @@ struct ContentView: View {
     func bannerView() -> some View {
         ZStack {
             Rectangle()
-                .fill(.gray)
+                .fill(viewModel.banner.color)
                 .overlay(content: {
                     Circle()
                         .fill(.yellow.opacity(0.4))
@@ -82,7 +71,7 @@ struct ContentView: View {
                 Spacer()
                 Text("나의 소비내역")
                     .font(.title3)
-                Text(viewModel.banner)
+                Text(viewModel.banner.totalFormat)
             }
             .font(.title)
             .foregroundColor(.white)
@@ -102,21 +91,9 @@ struct ContentView: View {
 //        let result = proxy.bounds(of: .scrollView)?.minX ?? 0
 //        return result
 //    }
-    
-    func listView(data: Market) -> some View {
-        HStack(alignment: .top) {
-            VStack(alignment: .leading) {
-                Text(data.koreanName)
-                Text(data.englishName)
-            }
-            Spacer()
-            Text(data.market)
-        }
-        .padding(.horizontal, 20)
-        .padding(.vertical, 10)
-        
-    }
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
