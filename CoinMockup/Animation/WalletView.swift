@@ -12,7 +12,12 @@ struct WalletView: View {
     
     @State private var isExpandable = false
     @State private var showDetail = false
+    var walletList = wallets
     
+    @State private var currentWallet: WalletModel = WalletModel(name: "", index: 0)
+    
+    // Namespace : 단순히 그룹을 만들어줌 ex) 여러개의 View를 하나로 구성될거야
+    @Namespace var animation
     
     var body: some View {
         VStack {
@@ -37,7 +42,7 @@ struct WalletView: View {
         // 화면 전환 X overlay를 통해서 다른 화면을 씌어버림
         .overlay {
             if showDetail {
-                WalletDetailView(showDetail: $showDetail)
+                    WalletDetailView(showDetail: $showDetail, currentWallet: currentWallet, animation: animation)
             }
         }
     }
@@ -45,8 +50,8 @@ struct WalletView: View {
     func cardSpace() -> some View {
         // 임의의 Rectangle을 만들고 opacity 0.01으로 사용자 이벤트 받을 수 있을때 애니메이션 적용
         ScrollView {
-            ForEach(0..<5) { item in
-                cardView(index: item)
+            ForEach(walletList, id: \.self) { item in
+                cardView(item)
                     .offset(y: 0) //0 , 100, 200, 300, 400
             }
         }
@@ -62,19 +67,24 @@ struct WalletView: View {
        
     }
     
-    func cardView(index: Int) -> some View {
+    func cardView(_ data: WalletModel) -> some View {
         
         RoundedRectangle(cornerRadius: 25)
-            .fill(Color.random())
+            .fill(data.color)
             .frame(height: 150)
             .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
-            .offset(y: CGFloat(index) * (isExpandable ? 0 : -130)) // true이면 0이 되니까 cardView에 offset 적용 안함
+            .offset(y: CGFloat(data.index) * (isExpandable ? 0 : -130)) // true이면 0이 되니까 cardView에 offset 적용 안함
             .onTapGesture {
                 withAnimation { // 17.0 + <- .bouncy
+                    // 정보 업데이트 
+                    currentWallet = data
                     // detailView로 넘겨주기
                     showDetail = true
+                   
                 }
             }
+             
+            .matchedGeometryEffect(id: data, in: animation)
         
     }
     
