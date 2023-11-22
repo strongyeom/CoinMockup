@@ -52,6 +52,11 @@ struct WalletView: View {
             .frame(height: 150)
             .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
             .offset(y: CGFloat(index) * (isExpandable ? 0 : -130)) // true이면 0이 되니까 cardView에 offset 적용 안함
+            .onTapGesture {
+                withAnimation { // 17.0 + <- .bouncy
+                    isExpandable = true
+                }
+            }
         
     }
     
@@ -70,7 +75,9 @@ struct WalletView: View {
     
     func topOverlayBtn() -> some View {
         Button {
-            
+            withAnimation {
+                isExpandable = false
+            }
         } label: {
             Image(systemName: "plus")
                 .foregroundColor(.white)
