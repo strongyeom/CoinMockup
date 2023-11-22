@@ -37,7 +37,7 @@ struct WalletView: View {
         // 화면 전환 X overlay를 통해서 다른 화면을 씌어버림
         .overlay {
             if showDetail {
-                WalletDetailView()
+                WalletDetailView(showDetail: $showDetail)
             }
         }
     }
