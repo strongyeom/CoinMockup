@@ -9,7 +9,13 @@ import SwiftUI
 
 struct WalletDetailView: View {
     var body: some View {
-        Text("Hello, World!")
+        ZStack {
+            Color.gray
+            Text("Next View")
+                .font(.largeTitle)
+                .foregroundColor(.white)
+        }
+        .ignoresSafeArea()
     }
 }
 

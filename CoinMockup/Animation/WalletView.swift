@@ -11,7 +11,7 @@ struct WalletView: View {
     
     
     @State private var isExpandable = false
-    
+    @State private var showDetail = false
     
     
     var body: some View {
@@ -34,15 +34,32 @@ struct WalletView: View {
                 }
             }
         }
+        // 화면 전환 X overlay를 통해서 다른 화면을 씌어버림
+        .overlay {
+            if showDetail {
+                WalletDetailView()
+            }
+        }
     }
     
     func cardSpace() -> some View {
+        // 임의의 Rectangle을 만들고 opacity 0.01으로 사용자 이벤트 받을 수 있을때 애니메이션 적용
         ScrollView {
             ForEach(0..<5) { item in
                 cardView(index: item)
                     .offset(y: 0) //0 , 100, 200, 300, 400
             }
         }
+        .overlay {
+            Rectangle()
+                .fill(.black.opacity(isExpandable ? 0 : 0.01))
+                .onTapGesture {
+                    withAnimation {
+                        isExpandable = true
+                    }
+                }
+        }
+       
     }
     
     func cardView(index: Int) -> some View {
@@ -54,7 +71,8 @@ struct WalletView: View {
             .offset(y: CGFloat(index) * (isExpandable ? 0 : -130)) // true이면 0이 되니까 cardView에 offset 적용 안함
             .onTapGesture {
                 withAnimation { // 17.0 + <- .bouncy
-                    isExpandable = true
+                    // detailView로 넘겨주기
+                    showDetail = true
                 }
             }
         
