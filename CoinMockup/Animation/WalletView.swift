@@ -8,8 +8,37 @@
 import SwiftUI
 
 struct WalletView: View {
+    
+    @State private var isExpandable = false
+    
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            topTitle()
+            Spacer()
+            
+            Button("Animation On") {
+                
+                isExpandable = true
+            }
+            
+            Button("Animation Off") {
+                print("애니메이션 Off")
+                isExpandable = false
+            }
+        }
+    }
+    
+    func topTitle() -> some View {
+        Text("Jack Wallet")
+            .font(.largeTitle)
+            .bold()
+            .padding()
+            // Bool 값에 따라 alignment leading, center 값 변경하기
+            .frame(maxWidth: .infinity, alignment: isExpandable ? .leading : .center)
+            .background(.red)
+           
     }
 }
 
