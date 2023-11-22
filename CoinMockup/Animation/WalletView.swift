@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WalletView: View {
     
+    
     @State private var isExpandable = false
     
     
@@ -20,12 +21,19 @@ struct WalletView: View {
             
             Button("Animation On") {
                 
-                isExpandable = true
+                
+                
+                // State를 기준으로 데이터 변경함 <- State에 애니메이션 적용
+                withAnimation(.spring(response: 0.3, dampingFraction: 0.3, blendDuration: 0.3)) { // 17.0 + <- .bouncy
+                    isExpandable = true
+                }
             }
             
             Button("Animation Off") {
                 print("애니메이션 Off")
-                isExpandable = false
+                withAnimation {
+                    isExpandable = false
+                }
             }
         }
     }
