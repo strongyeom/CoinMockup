@@ -17,8 +17,7 @@ struct WalletView: View {
     var body: some View {
         VStack {
             topTitle()
-            Spacer()
-            
+            cardSpace()
             Button("Animation On") {
                 
                 
@@ -28,7 +27,6 @@ struct WalletView: View {
                     isExpandable = true
                 }
             }
-            
             Button("Animation Off") {
                 print("애니메이션 Off")
                 withAnimation {
@@ -36,6 +34,23 @@ struct WalletView: View {
                 }
             }
         }
+    }
+    
+    func cardSpace() -> some View {
+        ScrollView {
+            ForEach(0..<5) { item in
+                cardView()
+            }
+        }
+    }
+    
+    func cardView() -> some View {
+        
+        RoundedRectangle(cornerRadius: 25)
+            .fill(Color.random())
+            .frame(height: 150)
+            .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+            .offset(y: 50)
     }
     
     func topTitle() -> some View {
