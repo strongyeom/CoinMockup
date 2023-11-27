@@ -21,20 +21,22 @@ struct HorizontalView: View {
                 
                 VStack {
                     ForEach(horizontalDummy, id: \.id) { item in
-                        HStack {
+                        HStack(spacing: 10) {
                             Text(item.data)
-                                .frame(width: grapWidth * 0.3)
-                            ZStack {
+                                .frame(width: proxy.size.width * 0.2)
+                                .background(.green)
+                            ZStack(alignment: .leading)  {
                                 Rectangle()
                                     .foregroundStyle(.blue.opacity(0.4))
+                                    // Rectangle에 대한 최대 길이에 대한 한번더 geometryReader를 활용하여 비율을 잡아야 넘어가지 않음 ... 🧐 어떻게 하면 좋을까??
                                     .frame(width: CGFloat(item.point) / 10)
-                                    .frame(maxWidth: grapWidth * 0.7 / 10)
+                                    
                                 Text(item.point.formatted())
                             }
-                           
-                            .frame(maxWidth: .infinity)
+                            .frame(maxWidth: grapWidth * 0.8, alignment: .leading)
                             .background(.gray)
                         }
+                        .background(.yellow)
                         .frame(height: 40)
                     }
                 }
@@ -44,7 +46,6 @@ struct HorizontalView: View {
                     print(proxy)
                     print(largest())
                 }
-            .background(.green)
             }
         }
     }
