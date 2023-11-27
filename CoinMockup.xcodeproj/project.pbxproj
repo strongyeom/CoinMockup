@@ -33,6 +33,9 @@
 		26F565E52B143263006A58CA /* HorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F565E42B143263006A58CA /* HorizontalView.swift */; };
 		26F565E72B143574006A58CA /* HorizontalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F565E62B143574006A58CA /* HorizontalData.swift */; };
 		26F565E92B143C78006A58CA /* HorizontalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F565E82B143C78006A58CA /* HorizontalViewModel.swift */; };
+		26F565EC2B145E7F006A58CA /* ExampleSeSacView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F565EB2B145E7F006A58CA /* ExampleSeSacView.swift */; };
+		26F565EE2B145E9A006A58CA /* ExampleViewWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F565ED2B145E9A006A58CA /* ExampleViewWebView.swift */; };
+		26F565F02B145F55006A58CA /* ExampleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F565EF2B145F55006A58CA /* ExampleTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +66,9 @@
 		26F565E42B143263006A58CA /* HorizontalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalView.swift; sourceTree = "<group>"; };
 		26F565E62B143574006A58CA /* HorizontalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalData.swift; sourceTree = "<group>"; };
 		26F565E82B143C78006A58CA /* HorizontalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalViewModel.swift; sourceTree = "<group>"; };
+		26F565EB2B145E7F006A58CA /* ExampleSeSacView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleSeSacView.swift; sourceTree = "<group>"; };
+		26F565ED2B145E9A006A58CA /* ExampleViewWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewWebView.swift; sourceTree = "<group>"; };
+		26F565EF2B145F55006A58CA /* ExampleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,7 @@
 				26F565DD2B141D8C006A58CA /* SeSacView.swift */,
 				26F565DF2B141E62006A58CA /* MyWebView.swift */,
 				26F565E12B14219A006A58CA /* MyTextField.swift */,
+				26F565EA2B145E66006A58CA /* ExampleWithUIKit */,
 			);
 			path = WithUIKit;
 			sourceTree = "<group>";
@@ -187,6 +194,16 @@
 				26F565E82B143C78006A58CA /* HorizontalViewModel.swift */,
 			);
 			path = Horizontal;
+			sourceTree = "<group>";
+		};
+		26F565EA2B145E66006A58CA /* ExampleWithUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				26F565EB2B145E7F006A58CA /* ExampleSeSacView.swift */,
+				26F565ED2B145E9A006A58CA /* ExampleViewWebView.swift */,
+				26F565EF2B145F55006A58CA /* ExampleTextField.swift */,
+			);
+			path = ExampleWithUIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +284,7 @@
 				26F03BC02B0B007000BC5E68 /* CoinMockupApp.swift in Sources */,
 				26F03BD72B0BAA8F00BC5E68 /* Banner.swift in Sources */,
 				26F565E72B143574006A58CA /* HorizontalData.swift in Sources */,
+				26F565EC2B145E7F006A58CA /* ExampleSeSacView.swift in Sources */,
 				26E699A62B0DA54600DA90C0 /* WalletModel.swift in Sources */,
 				264412722B0C809B003BA01A /* BannerTestView.swift in Sources */,
 				264412662B0C4A16003BA01A /* OverlayView.swift in Sources */,
@@ -282,7 +300,9 @@
 				26F565DE2B141D8C006A58CA /* SeSacView.swift in Sources */,
 				26F565E02B141E62006A58CA /* MyWebView.swift in Sources */,
 				264412762B0C938C003BA01A /* BannverViewModel.swift in Sources */,
+				26F565F02B145F55006A58CA /* ExampleTextField.swift in Sources */,
 				2644126E2B0C733F003BA01A /* ListView.swift in Sources */,
+				26F565EE2B145E9A006A58CA /* ExampleViewWebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
