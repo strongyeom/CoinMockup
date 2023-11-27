@@ -52,7 +52,6 @@ struct WalletView: View {
         ScrollView {
             ForEach(walletList, id: \.self) { item in
                 cardView(item)
-                    .offset(y: 0) //0 , 100, 200, 300, 400
             }
         }
         .overlay {

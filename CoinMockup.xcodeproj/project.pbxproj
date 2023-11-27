@@ -27,6 +27,9 @@
 		26F03BD32B0BA1BA00BC5E68 /* ExampleContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F03BD22B0BA1BA00BC5E68 /* ExampleContentView.swift */; };
 		26F03BD62B0BAA8F00BC5E68 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F03BD42B0BAA8F00BC5E68 /* Money.swift */; };
 		26F03BD72B0BAA8F00BC5E68 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F03BD52B0BAA8F00BC5E68 /* Banner.swift */; };
+		26F565DE2B141D8C006A58CA /* SeSacView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F565DD2B141D8C006A58CA /* SeSacView.swift */; };
+		26F565E02B141E62006A58CA /* MyWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F565DF2B141E62006A58CA /* MyWebView.swift */; };
+		26F565E22B14219A006A58CA /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F565E12B14219A006A58CA /* MyTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,9 @@
 		26F03BD22B0BA1BA00BC5E68 /* ExampleContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleContentView.swift; sourceTree = "<group>"; };
 		26F03BD42B0BAA8F00BC5E68 /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
 		26F03BD52B0BAA8F00BC5E68 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		26F565DD2B141D8C006A58CA /* SeSacView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSacView.swift; sourceTree = "<group>"; };
+		26F565DF2B141E62006A58CA /* MyWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebView.swift; sourceTree = "<group>"; };
+		26F565E12B14219A006A58CA /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +142,7 @@
 		26F03BBE2B0B007000BC5E68 /* CoinMockup */ = {
 			isa = PBXGroup;
 			children = (
+				26F565DC2B141D6C006A58CA /* WithUIKit */,
 				26E699A72B0DCCDA00DA90C0 /* MainView+VM */,
 				264412692B0C4E78003BA01A /* Network */,
 				2644126C2B0C7332003BA01A /* Example */,
@@ -153,6 +160,16 @@
 				26F03BC62B0B007300BC5E68 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		26F565DC2B141D6C006A58CA /* WithUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				26F565DD2B141D8C006A58CA /* SeSacView.swift */,
+				26F565DF2B141E62006A58CA /* MyWebView.swift */,
+				26F565E12B14219A006A58CA /* MyTextField.swift */,
+			);
+			path = WithUIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +257,10 @@
 				264412742B0C9380003BA01A /* BannerView.swift in Sources */,
 				264412682B0C4E75003BA01A /* UpbitAPI.swift in Sources */,
 				26E699A22B0D992400DA90C0 /* WalletDetailView.swift in Sources */,
+				26F565E22B14219A006A58CA /* MyTextField.swift in Sources */,
 				26F03BD32B0BA1BA00BC5E68 /* ExampleContentView.swift in Sources */,
+				26F565DE2B141D8C006A58CA /* SeSacView.swift in Sources */,
+				26F565E02B141E62006A58CA /* MyWebView.swift in Sources */,
 				264412762B0C938C003BA01A /* BannverViewModel.swift in Sources */,
 				2644126E2B0C733F003BA01A /* ListView.swift in Sources */,
 			);
