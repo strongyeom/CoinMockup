@@ -30,6 +30,9 @@
 		26F565DE2B141D8C006A58CA /* SeSacView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F565DD2B141D8C006A58CA /* SeSacView.swift */; };
 		26F565E02B141E62006A58CA /* MyWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F565DF2B141E62006A58CA /* MyWebView.swift */; };
 		26F565E22B14219A006A58CA /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F565E12B14219A006A58CA /* MyTextField.swift */; };
+		26F565E52B143263006A58CA /* HorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F565E42B143263006A58CA /* HorizontalView.swift */; };
+		26F565E72B143574006A58CA /* HorizontalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F565E62B143574006A58CA /* HorizontalData.swift */; };
+		26F565E92B143C78006A58CA /* HorizontalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F565E82B143C78006A58CA /* HorizontalViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +60,9 @@
 		26F565DD2B141D8C006A58CA /* SeSacView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSacView.swift; sourceTree = "<group>"; };
 		26F565DF2B141E62006A58CA /* MyWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebView.swift; sourceTree = "<group>"; };
 		26F565E12B14219A006A58CA /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
+		26F565E42B143263006A58CA /* HorizontalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalView.swift; sourceTree = "<group>"; };
+		26F565E62B143574006A58CA /* HorizontalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalData.swift; sourceTree = "<group>"; };
+		26F565E82B143C78006A58CA /* HorizontalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +148,7 @@
 		26F03BBE2B0B007000BC5E68 /* CoinMockup */ = {
 			isa = PBXGroup;
 			children = (
+				26F565E32B14322C006A58CA /* Horizontal */,
 				26F565DC2B141D6C006A58CA /* WithUIKit */,
 				26E699A72B0DCCDA00DA90C0 /* MainView+VM */,
 				264412692B0C4E78003BA01A /* Network */,
@@ -170,6 +177,16 @@
 				26F565E12B14219A006A58CA /* MyTextField.swift */,
 			);
 			path = WithUIKit;
+			sourceTree = "<group>";
+		};
+		26F565E32B14322C006A58CA /* Horizontal */ = {
+			isa = PBXGroup;
+			children = (
+				26F565E42B143263006A58CA /* HorizontalView.swift */,
+				26F565E62B143574006A58CA /* HorizontalData.swift */,
+				26F565E82B143C78006A58CA /* HorizontalViewModel.swift */,
+			);
+			path = Horizontal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,10 +261,12 @@
 			files = (
 				264412702B0C7369003BA01A /* ListViewModel.swift in Sources */,
 				2644126B2B0C595E003BA01A /* ContentViewModel.swift in Sources */,
+				26F565E92B143C78006A58CA /* HorizontalViewModel.swift in Sources */,
 				26F03BC22B0B007000BC5E68 /* ContentView.swift in Sources */,
 				26E699A02B0D85DF00DA90C0 /* WalletView.swift in Sources */,
 				26F03BC02B0B007000BC5E68 /* CoinMockupApp.swift in Sources */,
 				26F03BD72B0BAA8F00BC5E68 /* Banner.swift in Sources */,
+				26F565E72B143574006A58CA /* HorizontalData.swift in Sources */,
 				26E699A62B0DA54600DA90C0 /* WalletModel.swift in Sources */,
 				264412722B0C809B003BA01A /* BannerTestView.swift in Sources */,
 				264412662B0C4A16003BA01A /* OverlayView.swift in Sources */,
@@ -256,6 +275,7 @@
 				26E699AB2B0DD37400DA90C0 /* ExampleWalletDetailView.swift in Sources */,
 				264412742B0C9380003BA01A /* BannerView.swift in Sources */,
 				264412682B0C4E75003BA01A /* UpbitAPI.swift in Sources */,
+				26F565E52B143263006A58CA /* HorizontalView.swift in Sources */,
 				26E699A22B0D992400DA90C0 /* WalletDetailView.swift in Sources */,
 				26F565E22B14219A006A58CA /* MyTextField.swift in Sources */,
 				26F03BD32B0BA1BA00BC5E68 /* ExampleContentView.swift in Sources */,
