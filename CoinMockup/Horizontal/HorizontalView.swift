@@ -20,14 +20,14 @@ struct HorizontalView: View {
                 let grapWidth = proxy.size.width * 0.7// 챠트 최대 너비
                 
                 VStack {
-                    ForEach(viewModel.dummyData, id: \.id) { item in
+                    ForEach(viewModel.askOrderBook, id: \.id) { item in
                         HStack(spacing: 10) {
-                            Text(item.data)
+                            Text("\(item.size)")
                                 .frame(width: proxy.size.width * 0.2)
                                 .background(.green)
                             ZStack(alignment: .leading)  {
                                 // 각각의  dummyData가 가져야하는 데이터
-                                let graphSize = CGFloat(item.point) / CGFloat(viewModel.largest()) * grapWidth
+                                let graphSize = CGFloat(item.price) / CGFloat(viewModel.largestAskSize()) * grapWidth
                                 Rectangle()
                                     .foregroundStyle(.blue.opacity(0.4))
                                     // Rectangle에 대한 최대 길이에 대한 한번더 geometryReader를 활용하여 비율을 잡아야 넘어가지 않음 ... 🧐 어떻게 하면 좋을까??
@@ -35,7 +35,7 @@ struct HorizontalView: View {
                                     .frame(width: CGFloat(graphSize))
                                     .frame(maxWidth: grapWidth, alignment: .leading)
                                 
-                                Text(item.point.formatted())
+                                Text("\(item.price)")
                                     .frame(width: grapWidth)
                             }
                            
@@ -49,7 +49,8 @@ struct HorizontalView: View {
             }
         }
         .onAppear {
-             viewModel.timer()
+//             viewModel.timer()
+            viewModel.fetchOrderBook()
         }
     }
 }
