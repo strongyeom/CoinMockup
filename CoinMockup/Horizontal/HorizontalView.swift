@@ -17,23 +17,28 @@ struct HorizontalView: View {
             // 상위 뷰의(VStack) 사이즈에 비례해서 하위 뷰의 사이즈 비율로 설정할 수 있음
             GeometryReader { proxy in
                 
-                let grapWidth = proxy.size.width
+                let grapWidth = proxy.size.width * 0.7// 챠트 최대 너비
                 
                 VStack {
-                    ForEach(horizontalDummy, id: \.id) { item in
+                    ForEach(viewModel.dummyData, id: \.id) { item in
                         HStack(spacing: 10) {
                             Text(item.data)
                                 .frame(width: proxy.size.width * 0.2)
                                 .background(.green)
                             ZStack(alignment: .leading)  {
+                                // 각각의  dummyData가 가져야하는 데이터
+                                let graphSize = CGFloat(item.point) / CGFloat(viewModel.largest()) * grapWidth
                                 Rectangle()
                                     .foregroundStyle(.blue.opacity(0.4))
                                     // Rectangle에 대한 최대 길이에 대한 한번더 geometryReader를 활용하여 비율을 잡아야 넘어가지 않음 ... 🧐 어떻게 하면 좋을까??
-                                    .frame(width: CGFloat(item.point) / 10)
-                                    
+                                    // => 현재 ponit / 최대 값 point * VStack의 가로 길이
+                                    .frame(width: CGFloat(graphSize))
+                                    .frame(maxWidth: grapWidth, alignment: .leading)
+                                
                                 Text(item.point.formatted())
+                                    .frame(width: grapWidth)
                             }
-                            .frame(maxWidth: grapWidth * 0.8, alignment: .leading)
+                           
                             .background(.gray)
                         }
                         .background(.yellow)
@@ -41,12 +46,10 @@ struct HorizontalView: View {
                     }
                 }
                 .padding()
-                .onTapGesture {
-                    viewModel.timer()
-                    print(proxy)
-                    print(largest())
-                }
             }
+        }
+        .onAppear {
+             viewModel.timer()
         }
     }
 }
