@@ -9,6 +9,8 @@ import SwiftUI
 
 class HorizontalViewModel: ObservableObject {
     
+   
+    
     // @State의 범주는 View로 한정되어 있음 => ViewModel을 쓰는 이유 View에 @State가 너무 많으면 가독성 떨어짐 
     @Published var value = 0.0
     @Published var dummyData: [HorizontalData] = []
@@ -16,8 +18,15 @@ class HorizontalViewModel: ObservableObject {
     @Published var askOrderBook: [OrderBookItem] = []
     @Published var bidOrderBook: [OrderBookItem] = []
     
+    // ListView에서 갖고있는 market 데이터를 넘겨받기위한 변수설정
+    var market: Market
+    
+    init(market: Market) {
+        self.market = market
+    }
+    
     func fetchOrderBook() {
-        let url = URL(string: "https://api.upbit.com/v1/orderbook?markets=KRW-BTC")!
+        let url = URL(string: "https://api.upbit.com/v1/orderbook?markets=\(market.market)")!
         
         // 테스트 용이기 때문에 data만 받음
         URLSession.shared.dataTask(with: url) { data, response, error in
@@ -65,7 +74,7 @@ class HorizontalViewModel: ObservableObject {
         Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
             self.value += 0.5
             // 타이머가 동작할때마다 데이터(DummyData)가 달라지게끔 구성
-            self.fetchDummyData()
+            self.fetchOrderBook()
         }
     }
     

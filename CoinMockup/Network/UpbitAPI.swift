@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct Market: Codable, Identifiable {
-    var id = UUID()
+struct Market: Codable, Hashable {
     let market: String
     let koreanName: String
     let englishName: String

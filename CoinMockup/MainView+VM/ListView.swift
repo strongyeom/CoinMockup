@@ -15,30 +15,41 @@ struct ListView: View {
     @StateObject var viewModel = ListViewModel()
     
     var body: some View {
-        ScrollView {
-            LazyVStack(alignment: .leading) {
-                Button("서버 통신") {
-                    print("123")
-                }
-                ForEach(viewModel.market, id: \.id) { data in
-                    HStack {
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text(data.koreanName)
-                                .fontWeight(.bold)
-                            Text(data.englishName)
-                                .font(.caption)
-                                .foregroundColor(.gray)
-                        }
-                        Spacer()
-                        Text(data.market)
+        NavigationStack {
+            ScrollView {
+                LazyVStack(alignment: .leading) {
+                    Button("서버 통신") {
+                        viewModel.fetchAllMarket()
                     }
-                    .padding()
+                    ForEach(viewModel.market, id: \.self) { data in
+                        // NavigationLink 의 내용을 클릭했을때
+                        NavigationLink(value: data) {
+                            HStack {
+                                VStack(alignment: .leading, spacing: 5) {
+                                    Text(data.koreanName)
+                                        .fontWeight(.bold)
+                                    Text(data.englishName)
+                                        .font(.caption)
+                                        .foregroundColor(.gray)
+                                }
+                                Spacer()
+                                Text(data.market)
+                            }
+                            .padding()
+                        }
+                    }
+                    .onAppear {
+                        
+                    }
+                }
+                // 해당 Data를 View에 전달
+                .navigationDestination(for: Market.self) { market in
+                    let viewModel = HorizontalViewModel(market: market)
+                    HorizontalView(viewModel: viewModel)
+
+//                    ExampleHorizontalView(viewModel: HorizontalViewModel(market: market))
                 }
             }
-            .onAppear {
-                print("ListView - onAppear")
-                viewModel.fetchAllMarket()
-        }
         }
     }
 }

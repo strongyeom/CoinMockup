@@ -16,6 +16,7 @@
 		264412742B0C9380003BA01A /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264412732B0C9380003BA01A /* BannerView.swift */; };
 		264412762B0C938C003BA01A /* BannverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264412752B0C938C003BA01A /* BannverViewModel.swift */; };
 		2662FF702B157F490053EFCA /* OrderBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662FF6F2B157F490053EFCA /* OrderBookModel.swift */; };
+		2662FF732B15B3F80053EFCA /* ExampleHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662FF722B15B3F80053EFCA /* ExampleHorizontalView.swift */; };
 		26E699A02B0D85DF00DA90C0 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6999F2B0D85DF00DA90C0 /* WalletView.swift */; };
 		26E699A22B0D992400DA90C0 /* WalletDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E699A12B0D992400DA90C0 /* WalletDetailView.swift */; };
 		26E699A62B0DA54600DA90C0 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E699A52B0DA54600DA90C0 /* WalletModel.swift */; };
@@ -49,6 +50,7 @@
 		264412732B0C9380003BA01A /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		264412752B0C938C003BA01A /* BannverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannverViewModel.swift; sourceTree = "<group>"; };
 		2662FF6F2B157F490053EFCA /* OrderBookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBookModel.swift; sourceTree = "<group>"; };
+		2662FF722B15B3F80053EFCA /* ExampleHorizontalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleHorizontalView.swift; sourceTree = "<group>"; };
 		26E6999F2B0D85DF00DA90C0 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
 		26E699A12B0D992400DA90C0 /* WalletDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletDetailView.swift; sourceTree = "<group>"; };
 		26E699A52B0DA54600DA90C0 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
@@ -100,6 +102,14 @@
 				26E699AA2B0DD37400DA90C0 /* ExampleWalletDetailView.swift */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		2662FF712B15B3DE0053EFCA /* ExampleHorizontal */ = {
+			isa = PBXGroup;
+			children = (
+				2662FF722B15B3F80053EFCA /* ExampleHorizontalView.swift */,
+			);
+			path = ExampleHorizontal;
 			sourceTree = "<group>";
 		};
 		26E6999D2B0D857B00DA90C0 /* Model */ = {
@@ -195,6 +205,7 @@
 				26F565E62B143574006A58CA /* HorizontalData.swift */,
 				26F565E82B143C78006A58CA /* HorizontalViewModel.swift */,
 				2662FF6F2B157F490053EFCA /* OrderBookModel.swift */,
+				2662FF712B15B3DE0053EFCA /* ExampleHorizontal */,
 			);
 			path = Horizontal;
 			sourceTree = "<group>";
@@ -306,6 +317,7 @@
 				264412762B0C938C003BA01A /* BannverViewModel.swift in Sources */,
 				26F565F02B145F55006A58CA /* ExampleTextField.swift in Sources */,
 				2644126E2B0C733F003BA01A /* ListView.swift in Sources */,
+				2662FF732B15B3F80053EFCA /* ExampleHorizontalView.swift in Sources */,
 				26F565EE2B145E9A006A58CA /* ExampleViewWebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
