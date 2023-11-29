@@ -15,12 +15,12 @@ struct ListView: View {
     @StateObject var viewModel = ListViewModel()
     
     var body: some View {
-        NavigationStack {
             ScrollView {
                 LazyVStack(alignment: .leading) {
                     Button("서버 통신") {
                         viewModel.fetchAllMarket()
                     }
+                    
                     ForEach(viewModel.market, id: \.self) { data in
                         // NavigationLink 의 내용을 클릭했을때
                         NavigationLink(value: data) {
@@ -50,7 +50,6 @@ struct ListView: View {
 //                    ExampleHorizontalView(viewModel: HorizontalViewModel(market: market))
                 }
             }
-        }
     }
 }
 
