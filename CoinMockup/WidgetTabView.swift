@@ -37,7 +37,7 @@ struct WidgetTabView: View {
             switch $0.absoluteString {
             case "History":
                 selectedTap = "book"
-            case "Favotite":
+            case "Favorite":
                 selectedTap = "star"
             default:
                 selectedTap = "pencil"
