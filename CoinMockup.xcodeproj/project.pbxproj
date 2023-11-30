@@ -22,6 +22,13 @@
 		268E473B2B181A96008BECD3 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E473A2B181A96008BECD3 /* EntryView.swift */; };
 		268E473F2B182075008BECD3 /* UserDefaultsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E473E2B182075008BECD3 /* UserDefaultsGroup.swift */; };
 		268E47402B182075008BECD3 /* UserDefaultsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E473E2B182075008BECD3 /* UserDefaultsGroup.swift */; };
+		268E47462B183041008BECD3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EC02A52B16D24D00EB1D06 /* WidgetKit.framework */; };
+		268E47472B183041008BECD3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EC02A72B16D24D00EB1D06 /* SwiftUI.framework */; };
+		268E474A2B183041008BECD3 /* JackOrder2BookBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E47492B183041008BECD3 /* JackOrder2BookBundle.swift */; };
+		268E474C2B183041008BECD3 /* JackOrder2Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E474B2B183041008BECD3 /* JackOrder2Book.swift */; };
+		268E474E2B183045008BECD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 268E474D2B183045008BECD3 /* Assets.xcassets */; };
+		268E47522B183045008BECD3 /* JackOrder2BookExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 268E47452B183041008BECD3 /* JackOrder2BookExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		268E47572B18322E008BECD3 /* WidgetTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E47562B18322E008BECD3 /* WidgetTabView.swift */; };
 		26E699A02B0D85DF00DA90C0 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6999F2B0D85DF00DA90C0 /* WalletView.swift */; };
 		26E699A22B0D992400DA90C0 /* WalletDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E699A12B0D992400DA90C0 /* WalletDetailView.swift */; };
 		26E699A62B0DA54600DA90C0 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E699A52B0DA54600DA90C0 /* WalletModel.swift */; };
@@ -52,6 +59,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		268E47502B183045008BECD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26F03BB42B0B006F00BC5E68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 268E47442B183041008BECD3;
+			remoteInfo = JackOrder2BookExtension;
+		};
 		26EC02B12B16D25000EB1D06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 26F03BB42B0B006F00BC5E68 /* Project object */;
@@ -68,6 +82,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				268E47522B183045008BECD3 /* JackOrder2BookExtension.appex in Embed Foundation Extensions */,
 				26EC02B32B16D25000EB1D06 /* JackOrderBookExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -92,6 +107,12 @@
 		268E473C2B181ECA008BECD3 /* JackOrderBookExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JackOrderBookExtension.entitlements; sourceTree = "<group>"; };
 		268E473D2B181FBF008BECD3 /* CoinMockup.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoinMockup.entitlements; sourceTree = "<group>"; };
 		268E473E2B182075008BECD3 /* UserDefaultsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsGroup.swift; sourceTree = "<group>"; };
+		268E47452B183041008BECD3 /* JackOrder2BookExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JackOrder2BookExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		268E47492B183041008BECD3 /* JackOrder2BookBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JackOrder2BookBundle.swift; sourceTree = "<group>"; };
+		268E474B2B183041008BECD3 /* JackOrder2Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JackOrder2Book.swift; sourceTree = "<group>"; };
+		268E474D2B183045008BECD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		268E474F2B183045008BECD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		268E47562B18322E008BECD3 /* WidgetTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTabView.swift; sourceTree = "<group>"; };
 		26E6999F2B0D85DF00DA90C0 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
 		26E699A12B0D992400DA90C0 /* WalletDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletDetailView.swift; sourceTree = "<group>"; };
 		26E699A52B0DA54600DA90C0 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
@@ -124,6 +145,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		268E47422B183041008BECD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				268E47472B183041008BECD3 /* SwiftUI.framework in Frameworks */,
+				268E47462B183041008BECD3 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		26EC02A02B16D24D00EB1D06 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -184,6 +214,17 @@
 				268E473A2B181A96008BECD3 /* EntryView.swift */,
 			);
 			path = Entry;
+			sourceTree = "<group>";
+		};
+		268E47482B183041008BECD3 /* JackOrder2Book */ = {
+			isa = PBXGroup;
+			children = (
+				268E47492B183041008BECD3 /* JackOrder2BookBundle.swift */,
+				268E474B2B183041008BECD3 /* JackOrder2Book.swift */,
+				268E474D2B183045008BECD3 /* Assets.xcassets */,
+				268E474F2B183045008BECD3 /* Info.plist */,
+			);
+			path = JackOrder2Book;
 			sourceTree = "<group>";
 		};
 		26E6999D2B0D857B00DA90C0 /* Model */ = {
@@ -250,6 +291,7 @@
 				268E473C2B181ECA008BECD3 /* JackOrderBookExtension.entitlements */,
 				26F03BBE2B0B007000BC5E68 /* CoinMockup */,
 				26EC02A92B16D24D00EB1D06 /* JackOrderBook */,
+				268E47482B183041008BECD3 /* JackOrder2Book */,
 				26EC02A42B16D24D00EB1D06 /* Frameworks */,
 				26F03BBD2B0B007000BC5E68 /* Products */,
 			);
@@ -260,6 +302,7 @@
 			children = (
 				26F03BBC2B0B007000BC5E68 /* CoinMockup.app */,
 				26EC02A32B16D24D00EB1D06 /* JackOrderBookExtension.appex */,
+				268E47452B183041008BECD3 /* JackOrder2BookExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -277,6 +320,7 @@
 				26E6999E2B0D85AA00DA90C0 /* Animation */,
 				26F03BC32B0B007300BC5E68 /* Assets.xcassets */,
 				26F03BC52B0B007300BC5E68 /* Preview Content */,
+				268E47562B18322E008BECD3 /* WidgetTabView.swift */,
 			);
 			path = CoinMockup;
 			sourceTree = "<group>";
@@ -325,6 +369,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		268E47442B183041008BECD3 /* JackOrder2BookExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 268E47532B183045008BECD3 /* Build configuration list for PBXNativeTarget "JackOrder2BookExtension" */;
+			buildPhases = (
+				268E47412B183041008BECD3 /* Sources */,
+				268E47422B183041008BECD3 /* Frameworks */,
+				268E47432B183041008BECD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JackOrder2BookExtension;
+			productName = JackOrder2BookExtension;
+			productReference = 268E47452B183041008BECD3 /* JackOrder2BookExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		26EC02A22B16D24D00EB1D06 /* JackOrderBookExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26EC02B72B16D25000EB1D06 /* Build configuration list for PBXNativeTarget "JackOrderBookExtension" */;
@@ -355,6 +416,7 @@
 			);
 			dependencies = (
 				26EC02B22B16D25000EB1D06 /* PBXTargetDependency */,
+				268E47512B183045008BECD3 /* PBXTargetDependency */,
 			);
 			name = CoinMockup;
 			productName = CoinMockup;
@@ -371,6 +433,9 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					268E47442B183041008BECD3 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
 					26EC02A22B16D24D00EB1D06 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -394,11 +459,20 @@
 			targets = (
 				26F03BBB2B0B007000BC5E68 /* CoinMockup */,
 				26EC02A22B16D24D00EB1D06 /* JackOrderBookExtension */,
+				268E47442B183041008BECD3 /* JackOrder2BookExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		268E47432B183041008BECD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				268E474E2B183045008BECD3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		26EC02A12B16D24D00EB1D06 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -419,6 +493,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		268E47412B183041008BECD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				268E474A2B183041008BECD3 /* JackOrder2BookBundle.swift in Sources */,
+				268E474C2B183041008BECD3 /* JackOrder2Book.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		26EC029F2B16D24D00EB1D06 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -452,6 +535,7 @@
 				264412662B0C4A16003BA01A /* OverlayView.swift in Sources */,
 				26F03BD62B0BAA8F00BC5E68 /* Money.swift in Sources */,
 				26E699A92B0DCD0400DA90C0 /* ExampleWalletView.swift in Sources */,
+				268E47572B18322E008BECD3 /* WidgetTabView.swift in Sources */,
 				26E699AB2B0DD37400DA90C0 /* ExampleWalletDetailView.swift in Sources */,
 				264412742B0C9380003BA01A /* BannerView.swift in Sources */,
 				264412682B0C4E75003BA01A /* UpbitAPI.swift in Sources */,
@@ -472,6 +556,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		268E47512B183045008BECD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 268E47442B183041008BECD3 /* JackOrder2BookExtension */;
+			targetProxy = 268E47502B183045008BECD3 /* PBXContainerItemProxy */;
+		};
 		26EC02B22B16D25000EB1D06 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 26EC02A22B16D24D00EB1D06 /* JackOrderBookExtension */;
@@ -480,6 +569,60 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		268E47542B183045008BECD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D3U7XS5ZX2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JackOrder2Book/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JackOrder2Book;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.present.CoinMockup.JackOrder2Book;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		268E47552B183045008BECD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D3U7XS5ZX2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JackOrder2Book/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JackOrder2Book;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.present.CoinMockup.JackOrder2Book;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		26EC02B52B16D25000EB1D06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -715,6 +858,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		268E47532B183045008BECD3 /* Build configuration list for PBXNativeTarget "JackOrder2BookExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				268E47542B183045008BECD3 /* Debug */,
+				268E47552B183045008BECD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		26EC02B72B16D25000EB1D06 /* Build configuration list for PBXNativeTarget "JackOrderBookExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
