@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct HorizontalView: View {
     
@@ -50,9 +51,17 @@ struct HorizontalView: View {
         }
         .onAppear {
              viewModel.timer()
+            
+            // 저장하기 전 App Group에 있는 데이터
+            print(UserDefaults.groupShared.string(forKey: "Market"))
             // 나타나는 시점에 UD로 App Group에 저장 
             UserDefaults.groupShared.setValue(viewModel.market.koreanName, forKey: "Market")
             
+            // 저장한 후 App Group에 있는 데이터
+            print(UserDefaults.groupShared.string(forKey: "Market"))
+            
+            // 위젯 갱신 - 특정한 위젯만 갱신하기 위해 Widget에서 설정한 kind만 넣으면 됨 
+            WidgetCenter.shared.reloadTimelines(ofKind: "JackOrderBook")
         }
     }
 }

@@ -39,7 +39,7 @@ class HorizontalViewModel: ObservableObject {
             
             do {
                 let decodedData = try JSONDecoder().decode([OrderBookModel].self, from: data)
-                print(decodedData)
+//                print(decodedData)
                 DispatchQueue.main.async {
                     // 서버에서 들어오는 데이터 가공해서 담기
                     let result = decodedData.first?.orderbook_units ?? [OrderBookUnit(ask_price: 0, bid_price: 0, ask_size: 0, bid_size: 0)]

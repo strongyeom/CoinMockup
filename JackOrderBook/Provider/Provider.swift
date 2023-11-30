@@ -19,7 +19,7 @@ struct Provider: TimelineProvider {
         completion(entry)
     }
     // 위젯 상태에 대한 어떤 시점에 계속해서 위젯을 갱신해줄지 설정 해주는 타이밍 즉, 갱신 주기
-    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    func getTimeline(in context: Context, completion: @escaping (Timeline<SimpleEntry>) -> ()) {
         var entries: [SimpleEntry] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
@@ -28,7 +28,7 @@ struct Provider: TimelineProvider {
             let entryDate = Calendar.current.date(byAdding: .minute,
                                                   value: hourOffset,
                                                   to: currentDate)!
-            let entry = SimpleEntry(date: Date(), test: "두리안", token: "냄새나", price: Int.random(in: 100...1000000000))
+            let entry = SimpleEntry(date: Date(), test: "두리안", token: "냄새나", price: Int.random(in: 100...100000))
             entries.append(entry)
         }
         // 타임라인 마지막 날짜가 지난 뒤, 위젯키이 새로운 타임라인을  요청 할 수 있도록 설정 ( .atEnd )
