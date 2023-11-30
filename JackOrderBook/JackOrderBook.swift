@@ -24,9 +24,9 @@ struct JackOrderBook: Widget {
     }
 }
 
-struct JackOrderBook_Previews: PreviewProvider {
-    static var previews: some View {
-        JackOrderBookEntryView(entry: SimpleEntry(date: Date()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
-    }
-}
+//struct JackOrderBook_Previews: PreviewProvider {
+//    static var previews: some View {
+//        JackOrderBookEntryView(entry: SimpleEntry(date: Date()))
+//            .previewContext(WidgetPreviewContext(family: .systemSmall))
+//    }
+//}
