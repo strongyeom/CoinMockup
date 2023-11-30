@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HorizontalView: View {
     
-    @StateObject var viewModel = HorizontalViewModel(market: Market(market: "krw-btc", koreanName: "", englishName: ""))
+    @StateObject var viewModel = HorizontalViewModel(market: Market(market: "krw-btc", koreanName: "비트코인", englishName: "Bitcoin"))
     
     var body: some View {
         ScrollView {
@@ -50,6 +50,8 @@ struct HorizontalView: View {
         }
         .onAppear {
              viewModel.timer()
+            // 나타나는 시점에 UD로 App Group에 저장 
+            UserDefaults.groupShared.setValue(viewModel.market.koreanName, forKey: "Market")
             
         }
     }

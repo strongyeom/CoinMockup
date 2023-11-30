@@ -15,7 +15,8 @@ struct JackOrderBookEntryView : View {
         VStack {
             Text(entry.test)
             Text(entry.date, style: .time)
-            Text(entry.token)
+            Text(UserDefaults.groupShared.string(forKey: "Market") ?? "잭코인")
+//            Text(entry.token)
             Text(entry.price.formatted())
         }
       

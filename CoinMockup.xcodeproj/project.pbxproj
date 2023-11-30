@@ -20,6 +20,8 @@
 		268E47342B1819D0008BECD3 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E47322B18192C008BECD3 /* Provider.swift */; };
 		268E47382B181A59008BECD3 /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E47372B181A59008BECD3 /* SimpleEntry.swift */; };
 		268E473B2B181A96008BECD3 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E473A2B181A96008BECD3 /* EntryView.swift */; };
+		268E473F2B182075008BECD3 /* UserDefaultsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E473E2B182075008BECD3 /* UserDefaultsGroup.swift */; };
+		268E47402B182075008BECD3 /* UserDefaultsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E473E2B182075008BECD3 /* UserDefaultsGroup.swift */; };
 		26E699A02B0D85DF00DA90C0 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6999F2B0D85DF00DA90C0 /* WalletView.swift */; };
 		26E699A22B0D992400DA90C0 /* WalletDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E699A12B0D992400DA90C0 /* WalletDetailView.swift */; };
 		26E699A62B0DA54600DA90C0 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E699A52B0DA54600DA90C0 /* WalletModel.swift */; };
@@ -87,6 +89,9 @@
 		268E47322B18192C008BECD3 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		268E47372B181A59008BECD3 /* SimpleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEntry.swift; sourceTree = "<group>"; };
 		268E473A2B181A96008BECD3 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
+		268E473C2B181ECA008BECD3 /* JackOrderBookExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JackOrderBookExtension.entitlements; sourceTree = "<group>"; };
+		268E473D2B181FBF008BECD3 /* CoinMockup.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoinMockup.entitlements; sourceTree = "<group>"; };
+		268E473E2B182075008BECD3 /* UserDefaultsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsGroup.swift; sourceTree = "<group>"; };
 		26E6999F2B0D85DF00DA90C0 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
 		26E699A12B0D992400DA90C0 /* WalletDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletDetailView.swift; sourceTree = "<group>"; };
 		26E699A52B0DA54600DA90C0 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
@@ -234,6 +239,7 @@
 				26EC02AC2B16D24D00EB1D06 /* JackOrderBook.swift */,
 				26EC02AE2B16D25000EB1D06 /* Assets.xcassets */,
 				26EC02B02B16D25000EB1D06 /* Info.plist */,
+				268E473E2B182075008BECD3 /* UserDefaultsGroup.swift */,
 			);
 			path = JackOrderBook;
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 		26F03BB32B0B006F00BC5E68 = {
 			isa = PBXGroup;
 			children = (
+				268E473C2B181ECA008BECD3 /* JackOrderBookExtension.entitlements */,
 				26F03BBE2B0B007000BC5E68 /* CoinMockup */,
 				26EC02A92B16D24D00EB1D06 /* JackOrderBook */,
 				26EC02A42B16D24D00EB1D06 /* Frameworks */,
@@ -260,6 +267,7 @@
 		26F03BBE2B0B007000BC5E68 /* CoinMockup */ = {
 			isa = PBXGroup;
 			children = (
+				268E473D2B181FBF008BECD3 /* CoinMockup.entitlements */,
 				26F565E32B14322C006A58CA /* Horizontal */,
 				26F565DC2B141D6C006A58CA /* WithUIKit */,
 				26E699A72B0DCCDA00DA90C0 /* MainView+VM */,
@@ -419,6 +427,7 @@
 				26EC02AD2B16D24D00EB1D06 /* JackOrderBook.swift in Sources */,
 				268E473B2B181A96008BECD3 /* EntryView.swift in Sources */,
 				268E47342B1819D0008BECD3 /* Provider.swift in Sources */,
+				268E47402B182075008BECD3 /* UserDefaultsGroup.swift in Sources */,
 				26EC02AB2B16D24D00EB1D06 /* JackOrderBookBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +440,7 @@
 				2644126B2B0C595E003BA01A /* ContentViewModel.swift in Sources */,
 				26F565E92B143C78006A58CA /* HorizontalViewModel.swift in Sources */,
 				26F03BC22B0B007000BC5E68 /* ContentView.swift in Sources */,
+				268E473F2B182075008BECD3 /* UserDefaultsGroup.swift in Sources */,
 				26E699A02B0D85DF00DA90C0 /* WalletView.swift in Sources */,
 				26F03BC02B0B007000BC5E68 /* CoinMockupApp.swift in Sources */,
 				26F03BD72B0BAA8F00BC5E68 /* Banner.swift in Sources */,
@@ -475,8 +485,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = JackOrderBookExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D3U7XS5ZX2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JackOrderBook/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = JackOrderBook;
@@ -501,8 +513,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = JackOrderBookExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D3U7XS5ZX2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JackOrderBook/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = JackOrderBook;
@@ -642,9 +656,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CoinMockup/CoinMockup.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CoinMockup/Preview Content\"";
+				DEVELOPMENT_TEAM = D3U7XS5ZX2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -671,9 +687,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CoinMockup/CoinMockup.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CoinMockup/Preview Content\"";
+				DEVELOPMENT_TEAM = D3U7XS5ZX2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
