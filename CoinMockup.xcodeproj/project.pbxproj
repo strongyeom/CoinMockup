@@ -17,6 +17,9 @@
 		264412762B0C938C003BA01A /* BannverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264412752B0C938C003BA01A /* BannverViewModel.swift */; };
 		2662FF702B157F490053EFCA /* OrderBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662FF6F2B157F490053EFCA /* OrderBookModel.swift */; };
 		2662FF732B15B3F80053EFCA /* ExampleHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662FF722B15B3F80053EFCA /* ExampleHorizontalView.swift */; };
+		268E47342B1819D0008BECD3 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E47322B18192C008BECD3 /* Provider.swift */; };
+		268E47382B181A59008BECD3 /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E47372B181A59008BECD3 /* SimpleEntry.swift */; };
+		268E473B2B181A96008BECD3 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E473A2B181A96008BECD3 /* EntryView.swift */; };
 		26E699A02B0D85DF00DA90C0 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6999F2B0D85DF00DA90C0 /* WalletView.swift */; };
 		26E699A22B0D992400DA90C0 /* WalletDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E699A12B0D992400DA90C0 /* WalletDetailView.swift */; };
 		26E699A62B0DA54600DA90C0 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E699A52B0DA54600DA90C0 /* WalletModel.swift */; };
@@ -81,6 +84,9 @@
 		264412752B0C938C003BA01A /* BannverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannverViewModel.swift; sourceTree = "<group>"; };
 		2662FF6F2B157F490053EFCA /* OrderBookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBookModel.swift; sourceTree = "<group>"; };
 		2662FF722B15B3F80053EFCA /* ExampleHorizontalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleHorizontalView.swift; sourceTree = "<group>"; };
+		268E47322B18192C008BECD3 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		268E47372B181A59008BECD3 /* SimpleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEntry.swift; sourceTree = "<group>"; };
+		268E473A2B181A96008BECD3 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
 		26E6999F2B0D85DF00DA90C0 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
 		26E699A12B0D992400DA90C0 /* WalletDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletDetailView.swift; sourceTree = "<group>"; };
 		26E699A52B0DA54600DA90C0 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
@@ -158,6 +164,23 @@
 			path = ExampleHorizontal;
 			sourceTree = "<group>";
 		};
+		268E47312B181911008BECD3 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				268E47322B18192C008BECD3 /* Provider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		268E47392B181A7E008BECD3 /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				268E47372B181A59008BECD3 /* SimpleEntry.swift */,
+				268E473A2B181A96008BECD3 /* EntryView.swift */,
+			);
+			path = Entry;
+			sourceTree = "<group>";
+		};
 		26E6999D2B0D857B00DA90C0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +228,8 @@
 		26EC02A92B16D24D00EB1D06 /* JackOrderBook */ = {
 			isa = PBXGroup;
 			children = (
+				268E47392B181A7E008BECD3 /* Entry */,
+				268E47312B181911008BECD3 /* Provider */,
 				26EC02AA2B16D24D00EB1D06 /* JackOrderBookBundle.swift */,
 				26EC02AC2B16D24D00EB1D06 /* JackOrderBook.swift */,
 				26EC02AE2B16D25000EB1D06 /* Assets.xcassets */,
@@ -390,7 +415,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268E47382B181A59008BECD3 /* SimpleEntry.swift in Sources */,
 				26EC02AD2B16D24D00EB1D06 /* JackOrderBook.swift in Sources */,
+				268E473B2B181A96008BECD3 /* EntryView.swift in Sources */,
+				268E47342B1819D0008BECD3 /* Provider.swift in Sources */,
 				26EC02AB2B16D24D00EB1D06 /* JackOrderBookBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
